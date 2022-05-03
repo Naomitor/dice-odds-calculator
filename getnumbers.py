@@ -81,7 +81,7 @@ def differentdiceallatoncemultiple():
     # What's to do as user
     print("Please input the dice set, to exit type end:")
 
-    # Set dicepart False for loop then get how many dice the user wants to throw
+    # Set dicepart False for loop then get how many dice the user wants to throw or exit the program
     dicepart = False
     while not dicepart:
         dicepart = input()
@@ -89,18 +89,16 @@ def differentdiceallatoncemultiple():
         if dicepart == "end":
             sys.exit("Bye")
 
-    #
+    # Empty dicelist if error occurred
     dicelist = []
+    # Error protection if any false input was given
     try:
         # Look if d or numbers are missing
         dpoint = dicepart.find("d")
-        npoint = dicepart.find("1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9")
         if dpoint == -1:
             print("You forgot the d ;)")
-            # Look for number
-        elif npoint == -1:
-            print("You forgot the numbers!!!")
         else:
+            # Splitting the string into a list for further processing
             for i in range(dicepart.count("d")):
                 # Find the next d for spacing the numbers
                 dpoint = dicepart.find("d")
@@ -126,4 +124,5 @@ def differentdiceallatoncemultiple():
     except (IndexError, ValueError):
         print("That did not work. Please check for typos")
 
+    # Return dicelist to the caller function
     return dicelist

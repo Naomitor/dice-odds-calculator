@@ -17,9 +17,6 @@ while circle:
     # Call the get numbers function for the dice list
     dicelist = getnumbers.differentdiceallatoncemultiple()
 
-    if not dicelist:
-        continue
-
     # Set variables and calculate mean dmg enter resulttext for better user-visualisation
     result = 0
     resulttext = ""
