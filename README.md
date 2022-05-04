@@ -67,3 +67,4 @@ The end goals for this program are:
   - Can calculate the mean throw
   - Can calculate the chance to get any one throw
   - Can calculate the chance to get specific throw and/or all above or below
+- Optimize with multiprocessing or better maths
