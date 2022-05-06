@@ -42,7 +42,7 @@ def listswitheverything():
                         # Append the dice amount to the list
                         specialdicelist.append(int(dicepart[:dpoint]))
                         # Remove the amount and d from dicepart
-                        dicepart = dicepart[dpoint+2:]
+                        dicepart = dicepart[dpoint + 2:]
                         # Find the next space
                         spacepoint = dicepart.find(" ")
                         # If spacepoint is equal or larger than 1 filter all eyes into the diceeyeslist and append that to specialdicelist
@@ -63,7 +63,7 @@ def listswitheverything():
                         # Add the dice amount to the dice list to the point of the next d
                         dicelist.append(int(dicepart[:dpoint]))
                         # Remove the numbers and next d out of dicepart
-                        dicepart = dicepart[dpoint+1:]
+                        dicepart = dicepart[dpoint + 1:]
                         # Find the next space
                         spacepoint = dicepart.find(" ")
                         # Test for the end of dicepart by searching for space, if found append everything between it and 0 to the dicelist
@@ -78,6 +78,6 @@ def listswitheverything():
         except (IndexError, ValueError):
             print("That did not work. Please check for typos")
 
-    #print(dicelist, specialdicelist)
+    # print(dicelist, specialdicelist)
     # Return dicelist with normal sets, specialdicelist with the user defined set and the userinfo with input dice sets to the caller function
     return dicelist, specialdicelist, userinfo

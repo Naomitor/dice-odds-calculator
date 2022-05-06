@@ -1,20 +1,5 @@
 # dice-odds-calculator
-A training program that calculates the odds of any dice set thrown.
-
-Todo:
-- Overarching file that combines all the little codes and combines them to executable.
-- Get the dicemaker to output a list of any given dice
-    - After that expand on that to get all possibilities from one die, into a list for other features.
-    - Rework meanthrow.py to accommodate the new lists 
-- Have a graphical interface for easier navigation
-    - Implement graphs to visualize the possibilities better
-
-Finished:
-- Can calculate the mean throw on all dice starting with the number one to given input
-- Can intake multiple dice at once
-- Can intake multiple dice sets at once
-- Can calculate the chance to get any one value on any dice
-- Can calculate the chance to get equal or more than one value on any dice
+A program that can calculate the odds and result of any dice set thrown.
 
 Description of the different files:
 

@@ -2,7 +2,6 @@ import sys
 
 
 def getnumbers():
-
     # Set/Reset the variables for input
     diceamount = False
     diceeyes = False
@@ -77,7 +76,6 @@ def getnumberswithminimum():
 
 
 def differentdiceallatoncemultiple():
-
     # What's to do as user
     print("Please input the dice set, to exit type end:")
 
@@ -105,7 +103,7 @@ def differentdiceallatoncemultiple():
                 # Set diceamount to the numbers out of dicepart until the point of the next d
                 diceamount = int(dicepart[:dpoint])
                 # Remove the numbers and next d out of dicepart
-                dicepart = dicepart[dpoint+1:]
+                dicepart = dicepart[dpoint + 1:]
                 # Find the space for spacing the next numbers
                 spacepoint = dicepart.find(" ")
                 # Test for end of dicepart if not set to the point of space else set everything and fill in dicelist
@@ -117,7 +115,7 @@ def differentdiceallatoncemultiple():
                     dicelist.append(diceeyes)
                     break
                 # Remove the numbers and next space out of dicepart
-                dicepart = dicepart[spacepoint+1:]
+                dicepart = dicepart[spacepoint + 1:]
                 # Fill in dicelist
                 dicelist.append(diceamount)
                 dicelist.append(diceeyes)
