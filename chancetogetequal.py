@@ -3,6 +3,6 @@ import getnumbers
 
 diceamount, diceeyes = getnumbers.getnumbers()
 
-result = (1 / diceeyes * diceamount)*100
+result = (1 / diceeyes * diceamount) * 100
 
 print(format(result, '.2f'))

@@ -1,9 +1,25 @@
 # Calculates the chance to get any given value out of a die
-import getnumbers
+import dicemaker
 
-diceamount, diceeyes, minimum = getnumbers.getnumberswithminimum()
+# Initiate variables
+loop = True
+minimum = 0
+possibilities = 0
 
+# Get all possible throws
+alldicepossibilitieslist, maximumpossibilities = dicemaker.dicemaker()
 
-result = (1 / diceeyes * diceamount)*100
+print("The result are between: " + str(alldicepossibilitieslist[0]) + "-" + str(alldicepossibilitieslist[-1]) + ". What do you need at least?:")
+while loop:
+    try:
+        minimum = int(input())
+        loop = False
+    except ValueError:
+        print("That's no number")
 
-print(format(result, '.2f'))
+counter = minimum
+for i in range(alldicepossibilitieslist[-1] - minimum + 1):
+    possibilities += alldicepossibilitieslist.count(counter)
+    counter += 1
+
+print(format((possibilities / maximumpossibilities) * 100, '.2f') + "%")
